@@ -1,0 +1,9 @@
+CREATE TABLE badges (
+    Id INT NOT NULL,
+    UserId INT DEFAULT NULL,
+    Name VARCHAR(255) DEFAULT NULL,
+    Date timestamp DEFAULT NULL,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId)
+        REFERENCES users (Id)
+);
