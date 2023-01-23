@@ -1,0 +1,10 @@
+CREATE TABLE tags (
+    Id INT NOT NULL,
+    TagName VARCHAR(255) DEFAULT NULL,
+    Count INT DEFAULT NULL,
+    ExcerptPostId INT DEFAULT NULL,
+    WikiPostId INT DEFAULT NULL,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (ExcerptPostId)
+        REFERENCES posts (Id)
+);
