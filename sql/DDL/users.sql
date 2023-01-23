@@ -1,0 +1,18 @@
+--CREATING TABLES (with postgresql)
+CREATE TABLE users (
+    Id INT NOT NULL,
+    Reputation INT DEFAULT NULL,
+    CreationDate TIMESTAMP DEFAULT NULL,
+    DisplayName VARCHAR(255) DEFAULT NULL,
+    LastAccessDate TIMESTAMP DEFAULT NULL,
+    WebsiteUrl VARCHAR(255) DEFAULT NULL,
+    Location VARCHAR(255) DEFAULT NULL,
+    AboutMe TEXT DEFAULT NULL,
+    Views INT DEFAULT NULL,
+    UpVotes INT DEFAULT NULL,
+    DownVotes INT DEFAULT NULL,
+    AccountId INT DEFAULT NULL,
+    Age INT DEFAULT NULL,
+    ProfileImageUrl VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (Id)
+);
