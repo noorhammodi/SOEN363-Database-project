@@ -1,0 +1,14 @@
+CREATE TABLE comments (
+    Id INT NOT NULL,
+    PostId INT DEFAULT NULL,
+    Score INT DEFAULT NULL,
+    Text TEXT DEFAULT NULL,
+    CreationDate timestamp DEFAULT NULL,
+    UserId INT DEFAULT NULL,
+    UserDisplayName VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (PostId)
+        REFERENCES posts (Id),
+    FOREIGN KEY (UserId)
+        REFERENCES users (Id)
+);
