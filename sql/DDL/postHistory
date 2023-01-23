@@ -1,0 +1,16 @@
+CREATE TABLE postHistory (
+    Id INT NOT NULL,
+    PostHistoryTypeId INT DEFAULT NULL,
+    PostId INT DEFAULT NULL,
+    RevisionGUID VARCHAR(255) DEFAULT NULL,
+    CreationDate timestamp DEFAULT NULL,
+    UserId INT DEFAULT NULL,
+    Text TEXT DEFAULT NULL,
+    Comment TEXT DEFAULT NULL,
+    UserDisplayName VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (PostId)
+        REFERENCES posts (Id),
+    FOREIGN KEY (UserId)
+        REFERENCES users (Id)
+);
