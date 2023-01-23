@@ -1,0 +1,13 @@
+CREATE TABLE votes (
+    Id INT NOT NULL,
+    PostId INT DEFAULT NULL,
+    VoteTypeId INT DEFAULT NULL,
+    CreationDate timestamp DEFAULT NULL,
+    UserId INT DEFAULT NULL,
+    BountyAmount INT DEFAULT NULL,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (PostId)
+        REFERENCES posts (Id),
+    FOREIGN KEY (UserId)
+        REFERENCES users (Id)
+);
