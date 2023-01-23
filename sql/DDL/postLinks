@@ -1,0 +1,12 @@
+CREATE TABLE postLinks (
+    Id INT NOT NULL,
+    CreationDate TIMESTAMP DEFAULT NULL,
+    PostId INT DEFAULT NULL,
+    RelatedPostId INT DEFAULT NULL,
+    LinkTypeId INT DEFAULT NULL,
+    PRIMARY KEY (Id),
+    CONSTRAINT postlinks_stripped_PostId_fkey FOREIGN KEY (PostId)
+        REFERENCES posts (Id),
+    CONSTRAINT postlinks_stripped_RelatedPostId_fkey FOREIGN KEY (RelatedPostId)
+        REFERENCES posts (Id)
+);
