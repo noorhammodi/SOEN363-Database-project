@@ -1,0 +1,8 @@
+//1) Top 10 users who have received the most badges
+
+SELECT u.Id, u.DisplayName, COUNT(b.Id) AS BadgeCount
+FROM users AS u
+JOIN badges AS b ON u.Id = b.UserId
+GROUP BY u.Id, u.DisplayName
+ORDER BY BadgeCount DESC
+LIMIT 10
